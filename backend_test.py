@@ -13,12 +13,12 @@ from typing import Dict, Any, Optional
 
 # Configuration
 BASE_URL = "https://hack-monitor.preview.emergentagent.com/api"
-TEST_USER_EMAIL = "testuser@wolfcyber.com"
-TEST_USER_PASSWORD = "TestPassword123456789012"  # Exactly 24 characters
-TEST_USER_PIN = "12345"  # Exactly 5 digits
-TEST_ADMIN_EMAIL = "admin@wolfcyber.com"
-TEST_ADMIN_PASSWORD = "AdminPassword12345678901"  # Exactly 24 characters
-TEST_ADMIN_PIN = "54321"  # Exactly 5 digits
+TEST_ADMIN_EMAIL = "testuser@wolfcyber.com"  # First user is admin
+TEST_ADMIN_PASSWORD = "TestPassword123456789012"  # Exactly 24 characters
+TEST_ADMIN_PIN = "12345"  # Exactly 5 digits
+TEST_USER_EMAIL = "regularuser@wolfcyber.com"
+TEST_USER_PASSWORD = "UserPassword123456789012"  # Exactly 24 characters
+TEST_USER_PIN = "54321"  # Exactly 5 digits
 
 class WOLFAPITester:
     def __init__(self):
