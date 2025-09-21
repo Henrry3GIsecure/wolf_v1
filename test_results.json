@@ -3,152 +3,187 @@
     "test": "Language Detection",
     "success": true,
     "message": "Language detected: en for IP: 34.16.56.64",
-    "timestamp": "2025-09-21T10:01:28.974995",
+    "timestamp": "2025-09-21T10:03:47.353003",
     "details": {
       "ip": "34.16.56.64",
       "language": "en",
-      "detected_at": "2025-09-21T10:01:28.971804"
+      "detected_at": "2025-09-21T10:03:47.074703"
     }
   },
   {
     "test": "User Registration",
     "success": true,
-    "message": "User registered successfully. Admin: True",
-    "timestamp": "2025-09-21T10:01:30.027858",
+    "message": "User registered successfully. Admin: False",
+    "timestamp": "2025-09-21T10:03:48.395406",
     "details": {
-      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlckB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1MjkwfQ.9nRVUJTbqPcpW90cfNhZxvJd9trKJlA6B6wjhBNQlJE",
+      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZWd1bGFydXNlckB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1NDI4fQ.yuPQDVwF4na3ZP674fNc1X92GWlOIX_qzZzuEzgBOdo",
       "token_type": "bearer",
-      "user_id": "ec4586c2-315a-4573-a252-ffb333a3f8d7",
-      "is_admin": true
+      "user_id": "deddd177-8db3-4551-abda-2a334eb0aee4",
+      "is_admin": false
     }
   },
   {
-    "test": "Admin Registration",
+    "test": "Admin Login",
     "success": true,
-    "message": "Admin registered. Admin status: False",
-    "timestamp": "2025-09-21T10:01:30.544638",
+    "message": "Admin logged in successfully. Admin: True",
+    "timestamp": "2025-09-21T10:03:48.678804",
     "details": {
-      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1MjkwfQ.qZQ1NnMrqe9_Yw0B1mIibzR0_-CvghoDMGd01hE2gDI",
+      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlckB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1NDI4fQ.jLm_Xeugxh69U1fGArKH_3lIFNKiUcXJcCxssOqbi8E",
       "token_type": "bearer",
-      "user_id": "7fdfe461-ccba-4003-aef0-53ae2b23637e",
-      "is_admin": false
+      "user_id": "ec4586c2-315a-4573-a252-ffb333a3f8d7",
+      "is_admin": true
     }
   },
   {
     "test": "User Login",
     "success": true,
-    "message": "User logged in successfully",
-    "timestamp": "2025-09-21T10:01:39.143526",
+    "message": "User logged in successfully. Admin: False",
+    "timestamp": "2025-09-21T10:03:49.477569",
     "details": {
-      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlckB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1Mjk4fQ.F7Dg7gef_C8LCQKCoGF8XV6K18zYXY8SecR95TMn1VU",
+      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZWd1bGFydXNlckB3b2xmY3liZXIuY29tIiwiZXhwIjoxNzU4NTM1NDI5fQ.MjmjT5erCjTSXfba-1jA9cF4dueQGi6F0f0ioSv2tjQ",
       "token_type": "bearer",
-      "user_id": "ec4586c2-315a-4573-a252-ffb333a3f8d7",
-      "is_admin": true
+      "user_id": "deddd177-8db3-4551-abda-2a334eb0aee4",
+      "is_admin": false
     }
   },
   {
     "test": "Password Reset",
-    "success": false,
-    "message": "HTTP 422: {\"detail\":[{\"type\":\"value_error\",\"loc\":[\"body\",\"new_password\"],\"msg\":\"Value error, Password must be exactly 24 characters\",\"input\":\"NewPassword123456789012\",\"ctx\":{\"error\":{}},\"url\":\"https://errors.pydantic.dev/2.11/v/value_error\"}]}",
-    "timestamp": "2025-09-21T10:01:39.725916",
-    "details": null
+    "success": true,
+    "message": "Password reset and login with new password successful",
+    "timestamp": "2025-09-21T10:03:50.783638",
+    "details": {
+      "message": "Password reset successfully"
+    }
   },
   {
     "test": "Password Validation",
     "success": true,
     "message": "Password length validation working correctly",
-    "timestamp": "2025-09-21T10:01:40.284190",
+    "timestamp": "2025-09-21T10:03:51.334337",
     "details": null
   },
   {
     "test": "PIN Validation",
     "success": true,
     "message": "PIN length validation working correctly",
-    "timestamp": "2025-09-21T10:01:40.839531",
+    "timestamp": "2025-09-21T10:03:51.885065",
     "details": null
   },
   {
     "test": "QR Code Generation",
     "success": true,
     "message": "QR code generated for URL: https://hack-monitor.preview.emergentagent.com",
-    "timestamp": "2025-09-21T10:01:41.414868",
+    "timestamp": "2025-09-21T10:03:52.447387",
     "details": {
       "url": "https://hack-monitor.preview.emergentagent.com",
-      "generated_at": "2025-09-21T10:01:41.411653"
+      "generated_at": "2025-09-21T10:03:52.444260"
     }
   },
   {
     "test": "Threat Creation",
-    "success": false,
-    "message": "HTTP 403: {\"detail\":\"Admin access required\"}",
-    "timestamp": "2025-09-21T10:01:41.971784",
-    "details": null
+    "success": true,
+    "message": "Threat created successfully with ID: 89a7680c-4a40-41f3-b5c0-5535d9e01816",
+    "timestamp": "2025-09-21T10:03:53.021432",
+    "details": {
+      "id": "89a7680c-4a40-41f3-b5c0-5535d9e01816",
+      "title": "Test Cybersecurity Threat",
+      "description": "This is a test threat for API validation",
+      "threat_type": "malware",
+      "level": "alto",
+      "country": "United States",
+      "country_code": "US",
+      "url": "https://example.com/threat-details",
+      "image_url": "https://example.com/threat-image.jpg",
+      "social_reference": "@cybersec_alert",
+      "created_at": "2025-09-21T10:03:53.017861",
+      "updated_at": "2025-09-21T10:03:53.017863",
+      "is_active": true
+    }
   },
   {
     "test": "Threat Retrieval",
     "success": true,
-    "message": "Retrieved 0 threats",
-    "timestamp": "2025-09-21T10:01:42.520401",
+    "message": "Retrieved 3 threats",
+    "timestamp": "2025-09-21T10:03:53.576839",
     "details": {
-      "count": 0
+      "count": 3
     }
   },
   {
     "test": "Threat Filtering by Level",
     "success": true,
-    "message": "Retrieved 0 high-level threats",
-    "timestamp": "2025-09-21T10:01:42.570849",
+    "message": "Retrieved 3 high-level threats",
+    "timestamp": "2025-09-21T10:03:53.626997",
     "details": {
-      "count": 0
+      "count": 3
     }
   },
   {
     "test": "Threat Filtering by Country",
     "success": true,
-    "message": "Retrieved 0 US threats",
-    "timestamp": "2025-09-21T10:01:42.620906",
+    "message": "Retrieved 1 US threats",
+    "timestamp": "2025-09-21T10:03:53.677934",
     "details": {
-      "count": 0
+      "count": 1
     }
   },
   {
     "test": "Threat Update",
-    "success": false,
-    "message": "No admin token or threat ID available",
-    "timestamp": "2025-09-21T10:01:43.125175",
-    "details": null
+    "success": true,
+    "message": "Threat updated successfully",
+    "timestamp": "2025-09-21T10:03:54.231828",
+    "details": {
+      "message": "Threat updated successfully"
+    }
   },
   {
     "test": "Threat Deletion",
-    "success": false,
-    "message": "No admin token or threat ID available",
-    "timestamp": "2025-09-21T10:01:43.625312",
-    "details": null
+    "success": true,
+    "message": "Threat deleted successfully",
+    "timestamp": "2025-09-21T10:03:56.430744",
+    "details": {
+      "message": "Threat deleted successfully"
+    }
   },
   {
     "test": "JSON Upload",
-    "success": false,
-    "message": "HTTP 403: {\"detail\":\"Admin access required\"}",
-    "timestamp": "2025-09-21T10:01:44.177645",
-    "details": null
+    "success": true,
+    "message": "Bulk upload successful: Successfully imported 2 threats",
+    "timestamp": "2025-09-21T10:03:56.982182",
+    "details": {
+      "message": "Successfully imported 2 threats",
+      "total_processed": 2
+    }
   },
   {
     "test": "Statistics",
     "success": true,
-    "message": "Statistics retrieved: 0 total threats",
-    "timestamp": "2025-09-21T10:01:44.793196",
+    "message": "Statistics retrieved: 4 total threats",
+    "timestamp": "2025-09-21T10:03:57.534083",
     "details": {
-      "total_threats": 0,
-      "by_level": {},
-      "by_type": {},
-      "by_country": {}
+      "total_threats": 4,
+      "by_level": {
+        "alto": 3,
+        "medio": 1
+      },
+      "by_type": {
+        "hack": 1,
+        "leak": 1,
+        "malware": 2
+      },
+      "by_country": {
+        "MX": 1,
+        "TS": 1,
+        "TC": 1,
+        "ES": 1
+      }
     }
   },
   {
     "test": "Admin Access Control",
-    "success": false,
-    "message": "Expected 403/401 but got 200: {\"id\":\"dc7951ef-9ffa-41a9-a0cd-9885c6d9d6dd\",\"title\":\"Unauthorized Threat\",\"description\":\"This should fail\",\"threat_type\":\"malware\",\"level\":\"alto\",\"country\":\"Test\",\"country_code\":\"TS\",\"url\":null,\"image_url\":null,\"social_reference\":null,\"created_at\":\"2025-09-21T10:01:45.341848\",\"updated_at\":\"2025-09-21T10:01:45.341850\",\"is_active\":true}",
-    "timestamp": "2025-09-21T10:01:45.359340",
+    "success": true,
+    "message": "Regular user correctly denied admin access",
+    "timestamp": "2025-09-21T10:03:58.107546",
     "details": null
   }
 ]
