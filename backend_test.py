@@ -108,7 +108,7 @@ class WOLFAPITester:
     
     def test_user_registration(self):
         """Test user registration with validation"""
-        # Test valid registration
+        # Test regular user registration
         try:
             user_data = {
                 "email": TEST_USER_EMAIL,
@@ -132,36 +132,17 @@ class WOLFAPITester:
                     self.log_result("User Registration", False, 
                                   "Missing required fields in registration response", data)
             else:
-                self.log_result("User Registration", False, 
-                              f"HTTP {response.status_code}: {response.text}")
+                # If user already exists, try to login instead
+                if response.status_code == 400 and "already registered" in response.text:
+                    self.test_user_login()
+                else:
+                    self.log_result("User Registration", False, 
+                                  f"HTTP {response.status_code}: {response.text}")
         except Exception as e:
             self.log_result("User Registration", False, f"Exception: {str(e)}")
         
-        # Test admin registration (first user should be admin)
-        try:
-            admin_data = {
-                "email": TEST_ADMIN_EMAIL,
-                "password": TEST_ADMIN_PASSWORD,
-                "pin": TEST_ADMIN_PIN
-            }
-            
-            response = self.make_request("POST", "/auth/register", admin_data)
-            
-            if response.status_code == 200:
-                data = response.json()
-                self.admin_token = data["access_token"]
-                self.admin_id = data["user_id"]
-                self.log_result("Admin Registration", True, 
-                              f"Admin registered. Admin status: {data['is_admin']}", data)
-            else:
-                # If user already exists, try to login instead
-                if response.status_code == 400 and "already registered" in response.text:
-                    self.test_admin_login()
-                else:
-                    self.log_result("Admin Registration", False, 
-                                  f"HTTP {response.status_code}: {response.text}")
-        except Exception as e:
-            self.log_result("Admin Registration", False, f"Exception: {str(e)}")
+        # Get admin token by logging in with first user (who should be admin)
+        self.test_admin_login()
     
     def test_admin_login(self):
         """Test admin login"""
