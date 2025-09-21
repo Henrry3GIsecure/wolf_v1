@@ -197,7 +197,7 @@ class WOLFAPITester:
     def test_password_reset(self):
         """Test password reset with PIN"""
         try:
-            new_password = "NewPassword123456789012"  # Exactly 24 characters
+            new_password = "NewPassword1234567890123"  # Exactly 24 characters
             reset_data = {
                 "email": TEST_USER_EMAIL,
                 "pin": TEST_USER_PIN,
