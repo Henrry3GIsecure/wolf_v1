@@ -167,7 +167,7 @@ class WOLFAPITester:
             self.log_result("Admin Login", False, f"Exception: {str(e)}")
     
     def test_user_login(self):
-        """Test user login"""
+        """Test regular user login"""
         try:
             login_data = {
                 "email": TEST_USER_EMAIL,
@@ -184,7 +184,7 @@ class WOLFAPITester:
                     self.user_token = data["access_token"]
                     self.user_id = data["user_id"]
                     self.log_result("User Login", True, 
-                                  f"User logged in successfully", data)
+                                  f"User logged in successfully. Admin: {data['is_admin']}", data)
                 else:
                     self.log_result("User Login", False, 
                                   "Missing required fields in login response", data)
